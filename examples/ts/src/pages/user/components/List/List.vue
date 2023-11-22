@@ -28,7 +28,7 @@ export default defineComponent({
   },
   setup () {
     const users = ref<User[]>([]);
-    $API.USER_detail<UserModel>().then(res => {
+    $API.BFF_detail<UserModel>().then(res => {
       if (res.retCode === 20000) {
         console.log(res.data);
         users.value = res.data;
