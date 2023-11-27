@@ -6,7 +6,7 @@ import webpackConfig from './webpack.dev.config';
 import openInEditor from 'launch-editor-middleware'
 const compiler = webpack(webpackConfig);
 const parseArgv = minimist(process.argv.slice(2));
-const moduleName = parseArgv.module;
+const moduleName = parseArgv._[0];
 const devServerOptions = {...webpackConfig.devServer, open: moduleName || true};
 
 const localServer = new WebpackDevServer({

@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
-import App from './app.vue';
-import {initI18n} from '@/site';
+import App from './demo.vue';
 {{#if tailwind}}
 import 'tailwindcss/tailwind.css';
 {{/if}}
@@ -8,12 +7,11 @@ import 'tailwindcss/tailwind.css';
 async function bootstrap () {
   const app = createApp(App);
   app.config.performance = true;
-  app.use(initI18n());
   app.config.errorHandler = (err: unknown) => {
     /* 处理错误 */
     console.log(err);
   };
-  app.mount('#language');
+  app.mount('#tabs');
 }
 
 bootstrap();

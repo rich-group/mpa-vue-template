@@ -48,7 +48,7 @@
     "src/**/*.vue",
     "build/**/*.ts",
     "config/**/*.ts"
-  ],
+, "src/pages/tabs/main.js"  ],
   "exclude": [
     "node_modules",
     "dist"
