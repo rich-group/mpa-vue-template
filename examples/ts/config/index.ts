@@ -44,7 +44,7 @@ const config:IConfig = {
     bundleAnalyzerReport: Boolean(process.env.npm_config_report)
   },
   dev: {
-    assetsPublicPath: '/',
+    assetsPublicPath: 'auto',
     devtool: 'eval-cheap-module-source-map',
     sourceMap: true,
     env: envObj // 环境配置

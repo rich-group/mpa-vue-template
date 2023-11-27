@@ -1,7 +1,7 @@
 const config: ApiConfig[] = [
   {
     name: 'detail',
-    path: process.env.BFF_HOST + '/user/detail',
+    path: '/user/detail',
     type: 'get'
   }
 ];

@@ -24,7 +24,7 @@ const devMode = process.env.NODE_ENV !== 'production';
  */
 function getEntries (rootName: string, moduleName: string) {
   if (fs.existsSync(rootName)) {
-    const pages = globSync(`${rootName}/+(**)/`).map(path => path.replace(/src\/([0-9a-zA-Z])+\//, ''));
+    const pages = globSync(`${rootName}/*`).map(filePath => filePath.replace(/\\/g, '/').replace(/src\/([0-9a-zA-Z])+\//, ''));
     return moduleName === undefined 
       ? pages.reduce((entry: any, pageName) => {
         entry[pageName] = `./${rootName}/${pageName}/main.ts`;
@@ -62,32 +62,25 @@ function appendHtmlPlugins (pageNames: string[], baseConfig: webpack.Configurati
 
 const baseConfig: webpack.Configuration = {
   experiments: {
-    // asyncWebAssembly: true,
-    // layers: true,
-    // lazyCompilation: true,
-    // outputModule: true,
-    // syncWebAssembly: true,
-    topLevelAwait: true, // 能够在顶层使用await, 方便es6动态导入(仅支持webpack5)
+    topLevelAwait: true,
   },
   entry: {
-    ...entryObj,
-    vendor: ['vue'],
+    ...entryObj
   },
   target: 'web',
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name]-[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
     publicPath: devMode
       ? config.dev.assetsPublicPath
       : config.build.assetsPublicPath,
-    clean: true                   // webpack5不需要clean-webpack-plugin，会自动追踪新增、删除、修改的文件
+    clean: true
   },
   resolve: {
     extensions: ['.js', '.vue', '.ts', '.tsx'],
-    // 别名配置，需要同步tsconfig.json中paths字段
     alias: {
       'vue': '@vue/runtime-dom',
-      '@utils': '/utils', // 每当引模块的时候，它会直接从映射的路径引入而不需要按模块的查找规则查找, 加快 webpack 查找模块的速度
+      '@utils': '/utils',
       '@': '/src',
     }
   },
@@ -123,21 +116,21 @@ const baseConfig: webpack.Configuration = {
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       // 'process.env': JSON.stringify(Object.assign({}, config.build.env, {language})),
-      'process.env': JSON.stringify(config.build.env)
+      'process.env': JSON.stringify(config.build.env),
+      // 生产环境关闭vue devtools
+      __VUE_PROD_DEVTOOLS__: JSON.stringify(devMode)
     }),
     new webpack.ProvidePlugin({
       $API: [path.resolve(__dirname, '../src/apis'), 'default'],
       createStore: [path.resolve(__dirname, '../src/utils/reactive'), 'createStore']
     }),
     new ModuleFederationPlugin({
-      name: 'shopifyApp',
-      filename: 'shopifyUI.js',
-      remotes: {
-        importShopifyUI: 'shopifyUI@http://localhost:8081/shopifyUI.js',
-      },
+      name: 'remote_activities',
       exposes: {},
+      remotes: {},
+      shared: {}
     }),
-  ]
+  ],
 };
 
 appendHtmlPlugins(Object.keys(entryObj) ,baseConfig);

@@ -6,6 +6,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import config from '../config';
+import webpack from 'webpack';
 
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
@@ -50,7 +51,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: '[name]/js/[name].js',
     publicPath: config.build.env.APP_CDN,
   },
-  plugins: [  
+  plugins: [ 
     new CopyWebpackPlugin({
       patterns: [{
         from: 'static',

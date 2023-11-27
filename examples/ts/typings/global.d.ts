@@ -24,6 +24,12 @@ declare global {
   }
 
   type createStore = <T>(target: T) => UnwrapNestedRefs<T>
+
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production';
+    }
+  }
 }
 declare module 'axios' {
   export interface AxiosInstance {

@@ -1,12 +1,3 @@
-import Mock from 'mockjs';
-import user from './user';
-
-const mocks = [...user];
-
-function mockXHR () {
-  for (const m of mocks) {
-    Mock.mock(m.url, m.type, m.response());
-  }
+if (process.env.NODE_ENV !== 'production') {
+  require('./services/user');
 }
-
-mockXHR();

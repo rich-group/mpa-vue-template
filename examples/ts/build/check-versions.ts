@@ -29,7 +29,7 @@ export default function () {
   const warnings: string[] = []
   for (let i = 0; i < versionRequirements.length; i++) {
     const mod = versionRequirements[i]
-    if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) {
+    if (!semver.satisfies(mod.currentVersion as string, mod.versionRequirement)) {
       warnings.push(mod.name + ': ' +
         chalk.red(mod.currentVersion) + ' 应该更新为 ' +
         chalk.green(mod.versionRequirement)
