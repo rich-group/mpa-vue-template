@@ -37,11 +37,11 @@
   </div>
 </template>
 
-<script setup {{#if ts}} lang="ts"{{/if}}>
+{{#if}}
+<script lang="ts" setup>
+import type { TabProps } from './Tab.vue';
 import { useSlots, ref, onMounted, computed } from 'vue';
 import RenderComponent from './RenderComponent.vue';
-{{#if}}
-import type { TabProps } from './Tab.vue';
 const props = withDefaults(defineProps<{
   animation: boolean,
   duration: number
@@ -61,14 +61,13 @@ const trackerWidth = ref(0); // 选中下划线宽度
 const trackerPosition = ref(0); // 选中下划线的位置
 const transitionDuration = ref(0); // 切换动画过渡时间
 
-
 /**
  * @description 切换Tab标签
  * @param tab 标签对象
  * @param index 当前点击的索引
  * @param e 点击的事件
  */
- const changeTab = (tab: TabProps, index: number, e: Event) => {
+const changeTab = (tab: TabProps, index: number, e: Event) => {
   const target = e.target as HTMLElement;
   trackerWidth.value = target.getBoundingClientRect().width; // 获取当前点击的tab宽度
   transitionDuration.value = props.animation ? props.duration : 0; // 是否开启动画
@@ -96,7 +95,12 @@ onMounted(() => {
   trackerWidth.value = (tabRefs.value[selectedIndex.value] as HTMLElement)?.getBoundingClientRect?.()?.width;
 });
 
+</script>
 {{else}}
+<script setup>
+import type { TabProps } from './Tab.vue';
+import { useSlots, ref, onMounted, computed } from 'vue';
+import RenderComponent from './RenderComponent.vue';
 const props = defineProps({
   animation: {
     type: Boolean,
@@ -125,8 +129,8 @@ const transitionDuration = ref(0); // 切换动画过渡时间
  * @param index 当前点击的索引
  * @param e 点击的事件
  */
- const changeTab = (tab, index, e) => {
-  const target = e.target as HTMLElement;
+const changeTab = (tab, index, e) => {
+  const target = e.target;
   trackerWidth.value = target.getBoundingClientRect().width; // 获取当前点击的tab宽度
   transitionDuration.value = props.animation ? props.duration : 0; // 是否开启动画
   selectedTabName.value = tab.name;
@@ -153,9 +157,8 @@ onMounted(() => {
   trackerWidth.value = (tabRefs.value[selectedIndex.value])?.getBoundingClientRect?.()?.width;
 });
 
-{{/if}}
-
 </script>
+{{/if}}
 
 <style lang="scss">
 .tabs {
