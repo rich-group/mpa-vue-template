@@ -37,6 +37,7 @@
   </div>
 </template>
 
+{{#if ts}}
 <script lang="ts" setup>
 import type { TabProps } from './Tab.vue';
 import { useSlots, ref, onMounted, computed } from 'vue';
@@ -93,8 +94,8 @@ const tabContentStyle = computed(() => ({
 onMounted(() => {
   trackerWidth.value = (tabRefs.value[selectedIndex.value] as HTMLElement)?.getBoundingClientRect?.()?.width;
 });
-
 </script>
+{{/if}}
 
 <style lang="scss">
 .tabs {
