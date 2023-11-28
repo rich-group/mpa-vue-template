@@ -17,6 +17,7 @@
     "vue": "^3.2.31",
     "vue-i18n": "^9.2.2"
   },
+  {{#if ts}}
   "scripts": {
     "dev:sit": "ts-node build/dev.server.ts --env sit",
     "dev:pre": "ts-node build/dev.server.ts --env pre",
@@ -26,6 +27,17 @@
     "build:pre": "ts-node build/build.ts --env pre",
     "build:prd": "ts-node build/build.ts --env prd"
   },
+  {{ else }}
+  "scripts": {
+    "dev:sit": "ts-node build/dev.server.js --env sit",
+    "dev:pre": "ts-node build/dev.server.js --env pre",
+    "dev:prd": "ts-node build/dev.server.js --env prd",
+    "dll": "ts-node build/build.dll.js --env sit",
+    "build:sit": "ts-node build/build.js --env sit",
+    "build:pre": "ts-node build/build.js --env pre",
+    "build:prd": "ts-node build/build.js --env prd"
+  },
+  {{/if}}
   "lint-staged": {
     "*.{vue,js,ts}": "npm run lint:fix",
     "*.{vue,less}": "npm run stylelint:fix"
