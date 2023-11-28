@@ -3,7 +3,7 @@
     <com-list />
   </Provider>
 </template>
-{{#if}}
+{{#if ts}}
 <script setup lang="ts">
 import { Provider } from '@/components/Provider';
 import ComList from './components/List';

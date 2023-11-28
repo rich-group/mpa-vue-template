@@ -16,7 +16,7 @@
     </div>
   </div>
 </template>
-{{#if}}
+{{#if ts}}
 <script setup lang="ts">
 import { defineComponent, ref } from 'vue';
 import type { UserModel, User } from '@/apis/model/UserModel';

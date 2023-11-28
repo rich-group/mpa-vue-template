@@ -1,4 +1,5 @@
-<script{{#if ts}} lang="ts"{{/if}}>
+{{#if ts}}
+<script lang="ts">
 import { provide, defineComponent } from 'vue';
 export default defineComponent({
   name: 'Provider',
@@ -14,3 +15,22 @@ export default defineComponent({
   }
 });
 </script>
+{{else}}
+<script>
+import { provide, defineComponent } from 'vue';
+export default defineComponent({
+  name: 'Provider',
+  props: {
+    store: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  setup (props, {slots}) {
+    provide('store', props.store);
+    return slots.default;
+  }
+});
+</script>
+{{/if}}
+

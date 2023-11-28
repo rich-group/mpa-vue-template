@@ -5,7 +5,7 @@
   </div>
 </template>
 
-{{#if}}
+{{#if ts}}
 <script setup lang="ts">
 withDefaults(defineProps<{
   name: string,

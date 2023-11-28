@@ -7,7 +7,7 @@
     </div>
   </div>
 </template>
-{{#if}}
+{{#if ts}}
 <script setup lang="ts">
 import { Loading1, Loading2 } from '@/components/Loading';
 </script>
