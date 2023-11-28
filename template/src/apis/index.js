@@ -20,7 +20,7 @@ while(length--) {
   const moduleName = moduleNames[length];
   const moduleApis = apis[moduleName];
   if (Array.isArray(moduleApis) && moduleApis.length > 0) {
-    const res = moduleApis.reduce<API>((apis, api) => {
+    const res = moduleApis.reduce((apis, api) => {
       const apiPath = `${process.env[`${moduleName}`]}${api.path}`;
       return Object.assign(apis, {
         [moduleName + '_' + api.name]: (params, resetConfig) => 

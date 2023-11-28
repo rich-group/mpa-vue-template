@@ -19,7 +19,7 @@ defineProps({
     type: String
   },
   label: {
-    type
+    type: String
   }
 });
 </script>

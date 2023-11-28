@@ -27,10 +27,10 @@ function getEntries (rootName, moduleName) {
     const pages = globSync(`${rootName}/*`).map(filePath => filePath.replace(/\\/g, '/').replace(/src\/([0-9a-zA-Z])+\//, ''));
     return moduleName === undefined 
       ? pages.reduce((entry, pageName) => {
-        entry[pageName] = `./${rootName}/${pageName}/main.ts`;
+        entry[pageName] = `./${rootName}/${pageName}/main.js`;
         return entry;
       }, {})
-      : {[moduleName]: `./${rootName}/${moduleName}/main.ts`};
+      : {[moduleName]: `./${rootName}/${moduleName}/main.js`};
   }
   throw new Error('The pages folder is missing in the src directory');
 }
@@ -77,7 +77,7 @@ const baseConfig = {
     clean: true
   },
   resolve: {
-    extensions: ['.js', '.vue', '.ts', '.tsx'],
+    extensions: ['.js', '.vue', '.jsx'],
     alias: {
       'vue': '@vue/runtime-dom',
       '@utils': '/utils',
