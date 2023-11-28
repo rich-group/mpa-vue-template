@@ -15,19 +15,24 @@
     </button>
   </div>
 </template>
-<script{{#if ts}} lang="ts"{{/if}}>
+{{#if ts}}
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { locale } = useI18n();
+const setLangCodition = (val) => {
+  locale.value = val;
+  localStorage.setItem('language', locale.value);
+};
+</script>
+{{else}}
+<script setup>
 import { useI18n } from 'vue-i18n';
 import { defineComponent } from 'vue';
-export default defineComponent({
-  setup () {
-    const { locale } = useI18n();
-    const setLangCodition = (val) => {
-      locale.value = val;
-      localStorage.setItem('language', locale.value);
-    };
-    return {
-      setLangCodition
-    };
-  }
-});
+const { locale } = useI18n();
+const setLangCodition = (val) => {
+  locale.value = val;
+  localStorage.setItem('language', locale.value);
+};
 </script>
+
+{{/if}}

@@ -25,9 +25,18 @@
     </Tabs>
   </div>
 </template>
-<script setup {{#if ts}} lang="ts"{{/if}}>
+{{#if ts}}
+<script setup lang="ts">
 import { Tabs, Tab } from './components';
 const onChange = (tab) => {
   console.log('tab', tab);
 };
 </script>
+{{else}}
+<script setup>
+import { Tabs, Tab } from './components';
+const onChange = (tab) => {
+  console.log('tab', tab);
+};
+</script>
+{{/if}}

@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+{{#if}}
+<script setup lang="ts">
 withDefaults(defineProps<{
   name: string,
   age: number
@@ -13,5 +14,18 @@ withDefaults(defineProps<{
   name: '',
   age: 0
 });
-
 </script>
+{{else}}
+<script setup>
+defineProps({
+  name: {
+    type: String,
+    default: ''
+  },
+  age: {
+    type: Number,
+    default: 0
+  }
+})
+</script>
+{{/if}}

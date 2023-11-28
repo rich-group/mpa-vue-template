@@ -16,27 +16,36 @@
     </div>
   </div>
 </template>
-<script{{#if ts}} lang="ts"{{/if}}>
+{{#if}}
+<script setup lang="ts">
 import { defineComponent, ref } from 'vue';
-{{#if ts}}import { UserModel, User } from '@/apis/model/UserModel';{{/if}}
-export default defineComponent({
-  props: {
-    defaultUser: {
-      type: Object,
-      default: () => ({})
-    }
-  },
-  setup () {
-    const users = ref{{#if ts}}<User[]>{{/if}}([]);
-    $API.BFF_detail{{#if ts}}<UserModel>{{/if}}().then(res => {
-      if (res.retCode === 20000) {
-        console.log(res.data);
-        users.value = res.data;
-      }
-    });
-    return {
-      users
-    };
+import type { UserModel, User } from '@/apis/model/UserModel';
+withDefaults(defineComponent<{
+  defaultUser: Object
+}>(), {
+  defaultUser: {}
+})
+const users = ref<User[]>([]);
+$API.BFF_detail<UserModel>().then(res => {
+  if (res.retCode === 20000) {
+    users.value = res.data;
   }
 });
 </script>
+{{else}}
+<script setup>
+import { defineComponent, ref } from 'vue';
+defineComponent({
+  defaultUser: {
+    type: Object,
+    default: () => ({})
+  }
+})
+const users = ref([]);
+$API.BFF_detail().then(res => {
+  if (res.retCode === 20000) {
+    users.value = res.data;
+  }
+});
+</script>
+{{/if}}

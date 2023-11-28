@@ -7,14 +7,12 @@
     </div>
   </div>
 </template>
-<script>
-import { defineComponent } from 'vue';
+{{#if}}
+<script setup lang="ts">
 import { Loading1, Loading2 } from '@/components/Loading';
-export default defineComponent({
-  name: 'DEMO',
-  components: {
-    Loading1,
-    Loading2
-  }
-});
 </script>
+{{else}}
+<script setup>
+import { Loading1, Loading2 } from '@/components/Loading';
+</script>
+{{/if}}

@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './app.vue';
-import {initI18n} from '@/site';
+import { initI18n } from '@/site';
 {{#if tailwind}}
 import 'tailwindcss/tailwind.css';
 {{/if}}
