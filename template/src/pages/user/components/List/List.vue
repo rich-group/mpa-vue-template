@@ -18,9 +18,9 @@
 </template>
 {{#if ts}}
 <script setup lang="ts">
-import { defineComponent, ref } from 'vue';
+import {ref } from 'vue';
 import type { UserModel, User } from '@/apis/model/UserModel';
-withDefaults(defineComponent<{
+withDefaults(defineProps<{
   defaultUser: Object
 }>(), {
   defaultUser: {}
@@ -34,8 +34,8 @@ $API.BFF_detail<UserModel>().then(res => {
 </script>
 {{else}}
 <script setup>
-import { defineComponent, ref } from 'vue';
-defineComponent({
+import { ref } from 'vue';
+defineProps({
   defaultUser: {
     type: Object,
     default: () => ({})

@@ -13,7 +13,7 @@
           :class="{'ml-[40px]': index, 'selected_tab': tab.name === selectedTabName}"
           @click="changeTab(tab, index, $event)"
         >
-          {{ tab.label }}
+         {{ tab.label }}
         </span>
       </div>
       <div
