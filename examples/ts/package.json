@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.26.1",
+    "element-plus": "^2.4.3",
     "rich-axios": "^0.0.1",
     "vue": "^3.2.31",
     "vue-i18n": "^9.2.2"

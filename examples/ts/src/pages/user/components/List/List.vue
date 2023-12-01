@@ -1,11 +1,5 @@
 <template>
   <div class="flex">
-    <p>
-      <span>姓名: {{ defaultUser.name }}</span>
-      <span>年龄: {{ defaultUser.age }}</span>
-      <span>性别: {{ defaultUser.sex }}</span>,
-      <span>地址: {{ defaultUser.address }}</span>
-    </p>
     <div v-for="u in users">
       <p>
         <span>姓名: {{ u.name }}</span>,

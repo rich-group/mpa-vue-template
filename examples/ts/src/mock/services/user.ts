@@ -1,6 +1,5 @@
 import Mock from 'mockjs';
 import { build } from '../build';
-
 const users = {
   'data|5-10':[
     {
@@ -14,4 +13,20 @@ const users = {
   ]
 };
 
-Mock.mock(/\user\/detail/, 'get', build(users));
+
+export default [{
+  url: process.env.BFF_HOST + '/user/detail',
+  type: 'get',
+  response: () => {
+    return {
+      retCode: 20000,
+      retInfo: '',
+      success: true,
+      timeStamp: Number(new Date()),
+      ...users
+    };
+  }
+}];
+
+
+Mock.mock(/\/user\/detail/, 'get', build(users));

@@ -4,6 +4,9 @@ dependencies:
   axios:
     specifier: ^0.26.1
     version: registry.npmmirror.com/axios@0.26.1
+  element-plus:
+    specifier: ^2.4.3
+    version: registry.npmmirror.com/element-plus@2.4.3(vue@3.2.31)
   rich-axios:
     specifier: ^0.0.1
     version: registry.npmmirror.com/rich-axios@0.0.1(axios@0.26.1)
@@ -23,7 +26,7 @@ devDependencies:
     version: registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
   '@babel/plugin-syntax-top-level-await':
     specifier: ^7.14.5
-    version: 7.14.5
+    version: 7.14.5(@babel/core@7.21.0)
   '@babel/plugin-transform-runtime':
     specifier: ^7.21.0
     version: registry.npmmirror.com/@babel/plugin-transform-runtime@7.21.0(@babel/core@7.21.0)
@@ -234,40 +237,58 @@ devDependencies:
 
 packages:
 
-  /@babel/plugin-syntax-async-generators@7.8.4:
+  /@babel/plugin-syntax-async-generators@7.8.4(@babel/core@7.21.0):
     resolution: {integrity: sha512-tycmZxkGfZaxhMRbXlPXuVFpdWlXpir2W4AMhSJgRKzk/eDlIXOhb2LHWoLpDF7TEHylV5zNhykX6KAgHJmTNw==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-async-generators/-/@babel/plugin-syntax-async-generators-7.8.4.tgz}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
-  /@babel/plugin-syntax-json-strings@7.8.3:
+  /@babel/plugin-syntax-json-strings@7.8.3(@babel/core@7.21.0):
     resolution: {integrity: sha512-lY6kdGpWHvjoe2vk4WrAapEuBR69EMxZl+RoGRhrFGNYVK8mOPAW8VfbT/ZgrFbXlDNiiaxQnAtgVCZ6jv30EA==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-json-strings/-/@babel/plugin-syntax-json-strings-7.8.3.tgz}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
-  /@babel/plugin-syntax-logical-assignment-operators@7.10.4:
+  /@babel/plugin-syntax-logical-assignment-operators@7.10.4(@babel/core@7.21.0):
     resolution: {integrity: sha512-d8waShlpFDinQ5MtvGU9xDAOzKH47+FFoney2baFIoMr952hKOLp1HR7VszoZvOsV/4+RRszNY7D17ba0te0ig==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-logical-assignment-operators/-/@babel/plugin-syntax-logical-assignment-operators-7.10.4.tgz}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
-  /@babel/plugin-syntax-object-rest-spread@7.8.3:
+  /@babel/plugin-syntax-object-rest-spread@7.8.3(@babel/core@7.21.0):
     resolution: {integrity: sha512-XoqMijGZb9y3y2XskN+P1wUGiVwWZ5JmoDRwx5+3GmEplNyVM2s2Dg8ILFQm8rWM48orGy5YpI5Bl8U1y7ydlA==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-object-rest-spread/-/@babel/plugin-syntax-object-rest-spread-7.8.3.tgz}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
-  /@babel/plugin-syntax-optional-chaining@7.8.3:
+  /@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.21.0):
     resolution: {integrity: sha512-KoK9ErH1MBlCPxV0VANkXW2/dw4vlbGDrFgz8bmUsBGYkFRcbRwMh6cIJubdPrkxRwuGdtCk0v/wPTKbQgBjkg==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-optional-chaining/-/@babel/plugin-syntax-optional-chaining-7.8.3.tgz}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
-  /@babel/plugin-syntax-top-level-await@7.14.5:
+  /@babel/plugin-syntax-top-level-await@7.14.5(@babel/core@7.21.0):
     resolution: {integrity: sha512-hx++upLv5U1rgYfwe1xBQUhRmU41NEvpUvrp8jkrSCdvGSnM5/qdRMtylJ6PG5OFkBaHkbTAKTnd3/YyESRHFw==, tarball: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/@babel/plugin-syntax-top-level-await/-/@babel/plugin-syntax-top-level-await-7.14.5.tgz}
     engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
     dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
     dev: true
 
@@ -322,19 +343,31 @@ packages:
       indent-string: 4.0.0
     dev: true
 
-  /ajv-formats@2.1.1:
+  /ajv-formats@2.1.1(ajv@8.12.0):
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
+    peerDependencies:
+      ajv: ^8.0.0
+    peerDependenciesMeta:
+      ajv:
+        optional: true
     dependencies:
       ajv: 8.12.0
     dev: true
 
-  /ajv-keywords@3.5.2:
+  /ajv-keywords@3.5.2(ajv@6.12.6):
     resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
+    peerDependencies:
+      ajv: ^6.9.1
+    dependencies:
+      ajv: 6.12.6
     dev: true
 
-  /ajv-keywords@5.1.0:
+  /ajv-keywords@5.1.0(ajv@8.12.0):
     resolution: {integrity: sha512-YCS/JNFAUyr5vAuhk1DWm1CBxRHW9LbJ2ozWeemrIqpbsqKjHVxYPyi5GC0rjZIT5JxJ3virVTS8wk4i/Z+krw==}
+    peerDependencies:
+      ajv: ^8.8.2
     dependencies:
+      ajv: 8.12.0
       fast-deep-equal: 3.1.3
     dev: true
 
@@ -434,6 +467,10 @@ packages:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
     dev: true
+
+  /async-validator@4.2.5:
+    resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
+    dev: false
 
   /at-least-node@1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
@@ -806,6 +843,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: false
+
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -1037,7 +1078,6 @@ packages:
 
   /escape-html@1.0.3:
     resolution: {integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=}
-    dev: true
 
   /escape-string-regexp@1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
@@ -1958,6 +1998,22 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.21)(lodash@4.17.21):
+    resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es@4.17.12
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
+
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: true
@@ -1980,7 +2036,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -2071,6 +2126,10 @@ packages:
     resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /memoize-one@6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
+    dev: false
 
   /meow@8.1.2:
     resolution: {integrity: sha512-r85E3NdZ+mpYk1C6RjPFEMSE+s1iZMuHtsHAqY0DT3jZczl0diWUZ8g6oU7h0M9cD2EL+PzaYghhCLzR0ZNn5Q==}
@@ -2253,6 +2312,10 @@ packages:
     resolution: {integrity: sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==}
     engines: {node: '>=10'}
     dev: true
+
+  /normalize-wheel-es@1.2.0:
+    resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==}
+    dev: false
 
   /npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
@@ -3282,6 +3345,21 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
+  /vue-demi@0.14.6(vue@3.2.31):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.2.31
+    dev: false
+
   /vue-eslint-parser@9.3.1(eslint@8.49.0):
     resolution: {integrity: sha512-Clr85iD2XFZ3lJ52/ppmUDG/spxQu6+MAeHXjjyI4I1NUYZ9xmenQp4N0oaHJhrA8OOxltCVxMRfANGa70vU0g==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -3826,7 +3904,7 @@ packages:
       '@babel/helper-environment-visitor': registry.npmmirror.com/@babel/helper-environment-visitor@7.22.20
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
       '@babel/helper-remap-async-to-generator': registry.npmmirror.com/@babel/helper-remap-async-to-generator@7.22.20(@babel/core@7.21.0)
-      '@babel/plugin-syntax-async-generators': 7.8.4
+      '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.21.0)
     dev: true
 
   registry.npmmirror.com/@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.21.0):
@@ -3897,7 +3975,7 @@ packages:
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
-      '@babel/plugin-syntax-json-strings': 7.8.3
+      '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.21.0)
     dev: true
 
   registry.npmmirror.com/@babel/plugin-proposal-logical-assignment-operators@7.20.7(@babel/core@7.21.0):
@@ -3911,7 +3989,7 @@ packages:
     dependencies:
       '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
-      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4
+      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.21.0)
     dev: true
 
   registry.npmmirror.com/@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.21.0):
@@ -3955,7 +4033,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-compilation-targets': registry.npmmirror.com/@babel/helper-compilation-targets@7.22.15
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
-      '@babel/plugin-syntax-object-rest-spread': 7.8.3
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.21.0)
       '@babel/plugin-transform-parameters': registry.npmmirror.com/@babel/plugin-transform-parameters@7.23.3(@babel/core@7.21.0)
     dev: true
 
@@ -3985,7 +4063,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.20.2
       '@babel/helper-skip-transparent-expression-wrappers': registry.npmmirror.com/@babel/helper-skip-transparent-expression-wrappers@7.22.5
-      '@babel/plugin-syntax-optional-chaining': 7.8.3
+      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.21.0)
     dev: true
 
   registry.npmmirror.com/@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.21.0):
@@ -4478,7 +4556,7 @@ packages:
       '@babel/core': registry.npmmirror.com/@babel/core@7.21.0
       '@babel/helper-plugin-utils': registry.npmmirror.com/@babel/helper-plugin-utils@7.22.5
       '@babel/helper-skip-transparent-expression-wrappers': registry.npmmirror.com/@babel/helper-skip-transparent-expression-wrappers@7.22.5
-      '@babel/plugin-syntax-optional-chaining': 7.8.3
+      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.21.0)
     dev: true
 
   registry.npmmirror.com/@babel/plugin-transform-parameters@7.23.3(@babel/core@7.21.0):
@@ -4693,21 +4771,21 @@ packages:
       '@babel/plugin-proposal-private-methods': registry.npmmirror.com/@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.21.0)
       '@babel/plugin-proposal-private-property-in-object': registry.npmmirror.com/@babel/plugin-proposal-private-property-in-object@7.21.11(@babel/core@7.21.0)
       '@babel/plugin-proposal-unicode-property-regex': registry.npmmirror.com/@babel/plugin-proposal-unicode-property-regex@7.18.6(@babel/core@7.21.0)
-      '@babel/plugin-syntax-async-generators': 7.8.4
+      '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.21.0)
       '@babel/plugin-syntax-class-properties': registry.npmmirror.com/@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.21.0)
       '@babel/plugin-syntax-class-static-block': registry.npmmirror.com/@babel/plugin-syntax-class-static-block@7.14.5(@babel/core@7.21.0)
       '@babel/plugin-syntax-dynamic-import': registry.npmmirror.com/@babel/plugin-syntax-dynamic-import@7.8.3(@babel/core@7.21.0)
       '@babel/plugin-syntax-export-namespace-from': registry.npmmirror.com/@babel/plugin-syntax-export-namespace-from@7.8.3(@babel/core@7.21.0)
       '@babel/plugin-syntax-import-assertions': registry.npmmirror.com/@babel/plugin-syntax-import-assertions@7.23.3(@babel/core@7.21.0)
-      '@babel/plugin-syntax-json-strings': 7.8.3
-      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4
+      '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.21.0)
+      '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.21.0)
       '@babel/plugin-syntax-nullish-coalescing-operator': registry.npmmirror.com/@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.21.0)
       '@babel/plugin-syntax-numeric-separator': registry.npmmirror.com/@babel/plugin-syntax-numeric-separator@7.10.4(@babel/core@7.21.0)
-      '@babel/plugin-syntax-object-rest-spread': 7.8.3
+      '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.21.0)
       '@babel/plugin-syntax-optional-catch-binding': registry.npmmirror.com/@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.21.0)
-      '@babel/plugin-syntax-optional-chaining': 7.8.3
+      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.21.0)
       '@babel/plugin-syntax-private-property-in-object': registry.npmmirror.com/@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.21.0)
-      '@babel/plugin-syntax-top-level-await': 7.14.5
+      '@babel/plugin-syntax-top-level-await': 7.14.5(@babel/core@7.21.0)
       '@babel/plugin-transform-arrow-functions': registry.npmmirror.com/@babel/plugin-transform-arrow-functions@7.23.3(@babel/core@7.21.0)
       '@babel/plugin-transform-async-to-generator': registry.npmmirror.com/@babel/plugin-transform-async-to-generator@7.23.3(@babel/core@7.21.0)
       '@babel/plugin-transform-block-scoped-functions': registry.npmmirror.com/@babel/plugin-transform-block-scoped-functions@7.23.3(@babel/core@7.21.0)
@@ -5035,12 +5113,30 @@ packages:
       '@jridgewell/trace-mapping': registry.npmmirror.com/@jridgewell/trace-mapping@0.3.9
     dev: true
 
+  registry.npmmirror.com/@ctrl/tinycolor@3.6.1:
+    resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.6.1
+    engines: {node: '>=10'}
+    dev: false
+
   registry.npmmirror.com/@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz}
     name: '@discoveryjs/json-ext'
     version: 0.5.7
     engines: {node: '>=10.0.0'}
     dev: true
+
+  registry.npmmirror.com/@element-plus/icons-vue@2.3.1(vue@3.2.31):
+    resolution: {integrity: sha512-XxVUZv48RZAd87ucGS48jPf6pKu0yV5UCg9f4FFwtrYxXOwWuVJo6wOvSLKEoMQKjv8GsX/mhP6UsC1lRwbUWg==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.3.1.tgz}
+    id: registry.npmmirror.com/@element-plus/icons-vue/2.3.1
+    name: '@element-plus/icons-vue'
+    version: 2.3.1
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.2.31
+    dev: false
 
   registry.npmmirror.com/@eslint-community/eslint-utils@4.4.0(eslint@8.49.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz}
@@ -5087,6 +5183,29 @@ packages:
     version: 8.49.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  registry.npmmirror.com/@floating-ui/core@1.5.1:
+    resolution: {integrity: sha512-QgcKYwzcc8vvZ4n/5uklchy8KVdjJwcOeI+HnnTNclJjs2nYsy23DOCf+sSV1kBwD9yDAoVKCkv/gEPzgQU3Pw==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@floating-ui/core/-/core-1.5.1.tgz}
+    name: '@floating-ui/core'
+    version: 1.5.1
+    dependencies:
+      '@floating-ui/utils': registry.npmmirror.com/@floating-ui/utils@0.1.6
+    dev: false
+
+  registry.npmmirror.com/@floating-ui/dom@1.5.3:
+    resolution: {integrity: sha512-ClAbQnEqJAKCJOEbbLo5IUlZHkNszqhuxS4fHAVxRPXPya6Ysf2G8KypnYcOTpx6I8xcgF9bbHb6g/2KpbV8qA==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@floating-ui/dom/-/dom-1.5.3.tgz}
+    name: '@floating-ui/dom'
+    version: 1.5.3
+    dependencies:
+      '@floating-ui/core': registry.npmmirror.com/@floating-ui/core@1.5.1
+      '@floating-ui/utils': registry.npmmirror.com/@floating-ui/utils@0.1.6
+    dev: false
+
+  registry.npmmirror.com/@floating-ui/utils@0.1.6:
+    resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@floating-ui/utils/-/utils-0.1.6.tgz}
+    name: '@floating-ui/utils'
+    version: 0.1.6
+    dev: false
 
   registry.npmmirror.com/@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.11.13.tgz}
@@ -5315,6 +5434,12 @@ packages:
       - supports-color
     dev: true
 
+  registry.npmmirror.com/@sxzz/popperjs-es@2.11.7:
+    resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz}
+    name: '@sxzz/popperjs-es'
+    version: 2.11.7
+    dev: false
+
   registry.npmmirror.com/@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@trysound/sax/-/sax-0.2.0.tgz}
     name: '@trysound/sax'
@@ -5479,6 +5604,20 @@ packages:
     version: 7.0.15
     dev: true
 
+  registry.npmmirror.com/@types/lodash-es@4.17.12:
+    resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@types/lodash-es/-/lodash-es-4.17.12.tgz}
+    name: '@types/lodash-es'
+    version: 4.17.12
+    dependencies:
+      '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.202
+    dev: false
+
+  registry.npmmirror.com/@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.202.tgz}
+    name: '@types/lodash'
+    version: 4.14.202
+    dev: false
+
   registry.npmmirror.com/@types/mdast@3.0.15:
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@types/mdast/-/mdast-3.0.15.tgz}
     name: '@types/mdast'
@@ -5606,6 +5745,12 @@ packages:
     name: '@types/unist'
     version: 2.0.10
     dev: true
+
+  registry.npmmirror.com/@types/web-bluetooth@0.0.16:
+    resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@types/web-bluetooth/-/web-bluetooth-0.0.16.tgz}
+    name: '@types/web-bluetooth'
+    version: 0.0.16
+    dev: false
 
   registry.npmmirror.com/@types/webpack-bundle-analyzer@4.6.0(webpack-cli@4.10.0):
     resolution: {integrity: sha512-XeQmQCCXdZdap+A/60UKmxW5Mz31Vp9uieGlHB3T4z/o2OLVLtTI3bvTuS6A2OWd/rbAAQiGGWIEFQACu16szA==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@types/webpack-bundle-analyzer/-/webpack-bundle-analyzer-4.6.0.tgz}
@@ -5994,6 +6139,39 @@ packages:
     name: '@vue/shared'
     version: 3.2.47
     dev: true
+
+  registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.2.31):
+    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/core/9.13.0
+    name: '@vueuse/core'
+    version: 9.13.0
+    dependencies:
+      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.16
+      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@9.13.0
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.2.31)
+      vue-demi: 0.14.6(vue@3.2.31)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  registry.npmmirror.com/@vueuse/metadata@9.13.0:
+    resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.13.0.tgz}
+    name: '@vueuse/metadata'
+    version: 9.13.0
+    dev: false
+
+  registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.2.31):
+    resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-9.13.0.tgz}
+    id: registry.npmmirror.com/@vueuse/shared/9.13.0
+    name: '@vueuse/shared'
+    version: 9.13.0
+    dependencies:
+      vue-demi: 0.14.6(vue@3.2.31)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   registry.npmmirror.com/@webassemblyjs/ast@1.11.1:
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/@webassemblyjs/ast/-/ast-1.11.1.tgz}
@@ -7014,6 +7192,34 @@ packages:
     name: electron-to-chromium
     version: 1.4.593
     dev: true
+
+  registry.npmmirror.com/element-plus@2.4.3(vue@3.2.31):
+    resolution: {integrity: sha512-b3q26j+lM4SBqiyzw8HybybGnP2pk4MWgrnzzzYW5qKQUgV6EG1Zg7nMCfgCVccI8tNvZoTiUHb2mFaiB9qT8w==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/element-plus/-/element-plus-2.4.3.tgz}
+    id: registry.npmmirror.com/element-plus/2.4.3
+    name: element-plus
+    version: 2.4.3
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor@3.6.1
+      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue@2.3.1(vue@3.2.31)
+      '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom@1.5.3
+      '@popperjs/core': registry.npmmirror.com/@sxzz/popperjs-es@2.11.7
+      '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.202
+      '@types/lodash-es': registry.npmmirror.com/@types/lodash-es@4.17.12
+      '@vueuse/core': registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.2.31)
+      async-validator: 4.2.5
+      dayjs: 1.11.10
+      escape-html: 1.0.3
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.21)(lodash@4.17.21)
+      memoize-one: 6.0.0
+      normalize-wheel-es: 1.2.0
+      vue: registry.npmmirror.com/vue@3.2.31
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   registry.npmmirror.com/enhanced-resolve@5.15.0:
     resolution: {integrity: sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==, registry: https://packages.aliyun.com/5f3dd3d4db0493ecef90d98d/npm/npm-registry/, tarball: https://registry.npmmirror.com/enhanced-resolve/-/enhanced-resolve-5.15.0.tgz}
@@ -8711,7 +8917,7 @@ packages:
     dependencies:
       '@types/json-schema': registry.npmmirror.com/@types/json-schema@7.0.15
       ajv: 6.12.6
-      ajv-keywords: 3.5.2
+      ajv-keywords: 3.5.2(ajv@6.12.6)
     dev: true
 
   registry.npmmirror.com/schema-utils@3.3.0:
@@ -8722,7 +8928,7 @@ packages:
     dependencies:
       '@types/json-schema': registry.npmmirror.com/@types/json-schema@7.0.15
       ajv: 6.12.6
-      ajv-keywords: 3.5.2
+      ajv-keywords: 3.5.2(ajv@6.12.6)
     dev: true
 
   registry.npmmirror.com/schema-utils@4.2.0:
@@ -8733,8 +8939,8 @@ packages:
     dependencies:
       '@types/json-schema': registry.npmmirror.com/@types/json-schema@7.0.15
       ajv: 8.12.0
-      ajv-formats: 2.1.1
-      ajv-keywords: 5.1.0
+      ajv-formats: 2.1.1(ajv@8.12.0)
+      ajv-keywords: 5.1.0(ajv@8.12.0)
     dev: true
 
   registry.npmmirror.com/selfsigned@2.4.1:

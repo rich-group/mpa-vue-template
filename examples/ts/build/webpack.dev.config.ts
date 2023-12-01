@@ -5,7 +5,7 @@ import config from '../config';
 const plugins: (
   | ((this: Compiler, compiler: Compiler) => void)
   | WebpackPluginInstance
-)[] = []
+)[] = [];
 
 const webpackConfig: webpack.Configuration = merge(baseWebpackConfig, {
   devtool: config.dev.devtool,

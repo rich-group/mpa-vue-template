@@ -1,6 +1,6 @@
 import { createAxios } from 'rich-axios';
 
-const context = require.context('./interface', true, /\.ts/)
+const context = require.context('./interface', true, /\.ts/);
 
 const apis = context.keys().reduce((obj, modulePath) => {
   const fileName = /[a-zA-Z]+/.exec(modulePath)?.[0] || '';
@@ -32,5 +32,7 @@ while(length--) {
     Object.assign(modules, res);
   }
 }
+
+console.log(modules);
 
 export default modules;

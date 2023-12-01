@@ -3,16 +3,15 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import CompressWebpackPlugin from 'compression-webpack-plugin';
 import { merge } from 'webpack-merge';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
-import TerserPlugin from "terser-webpack-plugin";
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
 import config from '../config';
-import webpack from 'webpack';
 
 const webpackConfig = merge(baseWebpackConfig, {
   mode: 'production',
   devtool: config.build.devtool,
   performance: {
-    hints: "warning", // 启用性能提示
+    hints: 'warning', // 启用性能提示
   },
   optimization: {
     splitChunks: {
@@ -51,7 +50,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: '[name]/js/[name].js',
     publicPath: config.build.env.APP_CDN,
   },
-  plugins: [ 
+  plugins: [  
     new CopyWebpackPlugin({
       patterns: [{
         from: 'static',
@@ -61,8 +60,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // 打包时启用 gzip 压缩，生成.gz文件。将资源放到服务器，并且服务器配置支持 gzip
     new CompressWebpackPlugin({
       test: /\.js(\?.*)?$/i,
-      threshold: 10240,                           // 这里设置的是10K以上的进行压缩
-      deleteOriginalAssets: false,                // 是否删除原文件
+      threshold: 10240, // 这里设置的是10K以上的进行压缩
+      deleteOriginalAssets: false, // 是否删除原文件
       minRatio: 0.8
     }),
     new MiniCssExtractPlugin({
@@ -74,8 +73,8 @@ const webpackConfig = merge(baseWebpackConfig, {
 });
 
 if (config.build.bundleAnalyzerReport) {
-  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  webpackConfig.plugins!.push(new BundleAnalyzerPlugin())
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  webpackConfig.plugins!.push(new BundleAnalyzerPlugin());
 }
 
-export default webpackConfig
+export default webpackConfig;
