@@ -26,7 +26,7 @@ withDefaults(defineProps<{
   defaultUser: {}
 })
 const users = ref<User[]>([]);
-$API.BFF_detail<UserModel>().then(res => {
+$API.BFF.detail<UserModel>().then(res => {
   if (res.retCode === 20000) {
     users.value = res.data;
   }
@@ -42,7 +42,7 @@ defineProps({
   }
 })
 const users = ref([]);
-$API.BFF_detail().then(res => {
+$API.BFF.detail().then(res => {
   if (res.retCode === 20000) {
     users.value = res.data;
   }

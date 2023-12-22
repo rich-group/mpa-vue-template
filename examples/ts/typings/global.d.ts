@@ -16,7 +16,7 @@ declare global {
   }
 
   type API = {
-    [key: string]: <T = any>(obj?: any, resetConfig?: AxiosRequestConfig<any>) => Promise<T> & [Promise<T>, () => void]
+    [key: string]: <T = any>(params?: any, resetConfig?: AxiosRequestConfig<any>) => Promise<T> & [Promise<T>, () => void]
   }
 
   type $t = {
