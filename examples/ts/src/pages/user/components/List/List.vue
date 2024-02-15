@@ -1,5 +1,15 @@
 <template>
   <div class="flex">
+    <h2>默认数据：</h2>
+    <div>
+      <span>姓名: {{ defaultUser.name }}</span>,
+      <span>年龄: {{ defaultUser.age }}</span>,
+      <span>性别: {{ defaultUser.sex }}</span>,
+      <span>地址: {{ defaultUser.address }}</span>
+    </div>
+
+    <br>
+    <h2>mock数据：</h2>
     <div v-for="u in users">
       <p>
         <span>姓名: {{ u.name }}</span>,
